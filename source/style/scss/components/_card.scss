@@ -1,0 +1,80 @@
+.card{
+  display: flex;
+  flex-direction: column;
+  @include mobile{
+    margin-bottom: 30px;
+  }
+  .card-body{
+    max-width: 300px;
+    border: solid 0.5px $second;
+    @include pad{
+      width: 250px;
+    }
+    @include mobile{
+      width: 300px;
+    }
+  }
+  .card-img{
+    position: relative;
+    height: 315px;
+    width: 300px;
+    @include pad{
+      width: 250px;
+      height: 260px;
+    }
+    @include mobile{
+      height: 315px;
+      width: 300px;
+    }
+  }
+  .special{
+    position: absolute;
+    top: 0;
+    left: 20px;
+    padding: 10px;
+
+    writing-mode: vertical-rl;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-size: $font-s;
+    background-color: $main;
+    color: $second;
+  }
+  .like-btn{
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    font-size: $font-l;
+    color: $main;
+    cursor: pointer;
+  
+  }
+}
+.card-txt{
+  height: 56px;
+  font-size: $font-m;
+  font-weight: bold;
+  color: $main;
+  span{
+    display: block;
+    padding: 10px 15px;
+  }
+}
+.card-btn{
+  @include btn;
+  background-color: $second;
+  width: 300px;
+  height: 65px;
+  font-size: $font-l;
+  font-weight: bold;
+  transition: .3s;
+  @include pad{
+    width: 250px;
+  }
+  @include mobile{
+    width: 300px;
+  }
+  &:hover{
+    background-color: darken($second, 10%);
+  }
+}

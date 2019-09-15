@@ -1,0 +1,66 @@
+//breakPoint
+@mixin pad {
+  @media (max-width: 768px){
+    @content
+  }
+};
+@mixin mobile {
+  @media (max-width: 568px){
+    @content
+  }
+};
+@mixin mobile320 {
+  @media (max-width: 320px){
+    @content
+  }
+};
+
+//flex
+@mixin row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+};
+@mixin column-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+//sweet-style
+@mixin input-base() {
+  height: 56px;
+  border: 0;
+  font-size: $font-l;
+  background-color: $second;
+  color: $text;
+  @content
+};
+
+@mixin btn() {
+  border: 0;
+  background-color: $light;
+  color: $main;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Microsoft JhengHei','Roboto','San Francisco','Heiti FC','sans-serif';
+  cursor: pointer;
+  &:hover{
+    background-color: darken($light, 5%);
+  }
+  @content
+};
+
+// text
+@mixin textMode {
+  writing-mode: vertical-lr;
+}
+@mixin title {
+  width: 100%;
+  text-align: center;
+  font-size: $font-l;
+  font-weight: bold;
+}
+
+

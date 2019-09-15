@@ -1,0 +1,142 @@
+//step
+.step{
+  &:before{
+    content: '';
+    position: absolute;
+    width: 80%;
+    border: solid 0.5px $second;
+  }
+  @include mobile{
+    &:before{
+      width: 90%;
+    }
+  }
+}
+.roll{
+  width: 20px;
+  height: 20px;
+  border-radius: 99px;
+  border: solid 1px $second;
+  background-color: $main;
+  z-index: 10;
+}
+.roll-step{
+  width: 20px;
+  height: 20px;
+  border-radius: 99px;
+  border: solid 1px $second;
+  background-color: $main;
+  position: relative;
+  &:before{
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 99px;
+    border: solid 1.5px $main;
+    background-color: $second;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.roll-fin{
+  width: 20px;
+  height: 20px;
+  border-radius: 99px;
+  background-color: $second;
+  position: relative;
+}
+.fa-check{
+  position: absolute;
+  left: 3px;
+  top: 4px;
+  color: $main;
+  font-size: 14px;
+}
+
+//delivery form
+.delivery-form{
+  background-color: $main;
+  margin-bottom: 60px;
+  @include mobile{
+    margin-bottom: 0;
+  }
+  label{
+    font-size: $font-m;
+    color: $second;
+  }
+}
+.form-wrap{
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 30px;
+}
+.check-input{
+  @include input-base;
+  padding-left: 20px;
+  font-size: $font-s;
+  width: 100%;
+}
+.check-title{
+  @include mobile{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+//list
+.list-title{
+  font-size: $font-l;
+  font-weight: bold;
+  color: $text;
+  background-color: $second;
+  padding: 16px 0;
+  text-align: center;
+}
+.list-wrap{
+  padding: 0 20px;
+  color: $text;
+  border: solid 1px $second;
+}
+
+.cart-item{
+  margin-top: 20px;
+  color: $text;
+  border: solid 1px $second;
+}
+.list-img{
+  width: 120px;
+  height: 80px;
+}
+.check-btn{
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+}
+// pay icon
+.pay-icon{
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  color: $main;
+}
+
+//receipt btn
+.receipt-btn{
+  text-decoration: none;
+  color: $second;
+  font-size: $font-m;
+  font-weight: bold;
+  border: solid 1px $second;
+  height: 56px;
+  width: 100%;
+  transition: .2s;
+  &.active,&:hover,&:focus{
+    background-color: $second;
+    color: $main;
+  }
+}
+

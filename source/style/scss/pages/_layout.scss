@@ -1,0 +1,156 @@
+//base
+body,html{
+  font-family: 'Microsoft JhengHei','Roboto','San Francisco','Heiti FC','sans-serif';
+}
+//nav
+  .nav{
+    margin: 40px 0;
+    @include mobile{
+      margin: 30px 0;
+    }
+  }
+  .nav-item{
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 30px;
+    color: $main;
+    transition: .2s;
+    &:hover{
+      color: lighten($main, 20%);
+    }
+    @include pad{
+      padding: 15px 20px;
+      
+    }
+  }
+  .toggler{
+    display: none;
+    border: 0;
+    font-size: $font-m;
+    background-color: #fff;
+    color: $main;
+    cursor: pointer;
+    &:hover{
+      color: lighten($main, 20%);
+    }
+    @include pad{
+      display: block;
+    }
+  }
+  .toggler:focus >.collapse{
+    
+      display: block;
+    
+  }
+  .collapse{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mobile{
+      flex-direction: column;
+      line-height: 1.5;
+      display: none;
+    }
+  }
+
+//mail
+  .mail-wrap{
+    background-color: $main;
+    font-size: $font-l;
+    color: $second;
+    padding: 30px 0;
+  }
+  .mail{
+    @include row-center();
+    @include mobile{
+      flex-direction: column;
+    }
+  }
+  .mail img{
+    @include mobile{
+      flex-direction: column;
+    }
+  }
+  .mail-txt{
+    margin-left: 20px;
+    @include mobile320{
+      margin-left: 0px;
+    }
+  }
+  .mail-input{
+    position: relative;
+    padding-left: 45px;
+    @include input-base{
+      width: 300px;
+      color: $main;
+      @include pad{
+        width: 200px;
+      }
+      @include mobile{
+        width: 250px;
+        margin-top: 33px;
+      }
+      @include mobile320{
+        width: 200px;
+      }
+    }
+  }
+  .fa-envelope{
+    position: absolute;
+    top: 0;
+    left: 15px;
+    z-index: 10;
+    margin-left: 20px;
+    margin-top: 16px;
+    color: $main;
+    @include mobile{
+      top: 32px;
+    }
+    @include mobile320{
+      top: 33px;
+    }
+  }
+  .mail-btn{
+    @include btn{
+      width: 64px;
+      height: 56px;
+    }
+    @include mobile{
+      margin-top: 33px;
+    }
+  }
+  .fa-arrow-right{
+    margin-top: 40%;
+    transform: translatey(-40%);
+  }
+
+//footer
+  .footer{
+    background-color: $second;
+    color: $main;
+    
+  }
+  .footer-info{
+    margin-top: 115px;
+    @include mobile{
+      margin-top: 39.5px;
+    }
+    li{
+      line-height: 1.5;
+    }
+  }
+  .footer-bottom{
+    @include row-center();
+    @include mobile{
+      @include column-start();
+      align-items: flex-start;
+    }
+  }
+  .bottom-txt{
+    text-align: right;
+    @include mobile{
+      text-align: left;
+      margin-top: 23px;
+    }
+  }
+  

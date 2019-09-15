@@ -1,0 +1,88 @@
+//login
+.login-wrap{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 60px;
+  overflow: hidden;
+  @include mobile{
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-bottom: 0px;
+  }
+}
+.mobile-login{
+  color: $second;
+  background-color: $main;
+  font-size: $font-title;
+  padding: 30px 0;
+}
+.login{
+  background-color: $main;
+  @include mobile{
+    padding-top: 30px;
+  }
+  h3{
+    color: $second;
+    font-size: $font-title;
+    padding: 40px 0;
+  }
+}
+.login-input{
+  width: 88%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.mail-icon,.password-icon{
+  position: relative;
+  left: 45px;
+  top: 35px;
+  z-index: 10;
+  color: $main;  
+}
+.check{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  position: relative;
+  left: 20px;
+  @include mobile{
+    margin-bottom: 30px;
+  }
+}
+.rem-icon{
+  color: $second;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+//group
+.group{
+  background-color: $second;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  @include mobile{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 20px;
+  }
+  h3{
+    color: $text;
+    font-size: $font-l;
+    padding: 40px 0;
+  }
+  a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 330px;
+    height: 56px;
+    background-color: #fff;
+    margin-bottom: 16px;
+    @include mobile{
+      border-left: solid 1px $second;
+    }
+  }
+}
+

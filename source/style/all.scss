@@ -1,0 +1,20 @@
+@import './scss/variable';
+@import './scss/reset';
+
+@import './scss/mixin';
+@import './scss/grid';
+@import './scss/tools';
+
+//pages
+@import './scss/pages/layout';
+@import './scss/pages/index';
+@import './scss/pages/menu';
+@import './scss/pages/login';
+@import './scss/pages/cart';
+@import './scss/pages/delivery';
+
+@import './scss/pages/finish';
+
+//components
+@import './scss/components/card';
+@import './scss/components/form';
