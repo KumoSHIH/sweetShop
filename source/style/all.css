@@ -48,6 +48,34 @@ table {
   border-spacing: 0;
 }
 
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+[type=checkbox] {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid red;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+}
+
+[type=checkbox]:checked:after {
+  position: absolute;
+  content: '';
+  left: -35%;
+  top: -85%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #c19191;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -893,6 +921,12 @@ body, html {
   z-index: 2;
 }
 
+@media (max-width: 768px) {
+  .banner-wrap .banner-txt {
+    margin-left: 42%;
+  }
+}
+
 @media (max-width: 568px) {
   .banner-wrap .banner-txt {
     font-size: 20px;
@@ -1025,6 +1059,17 @@ body, html {
           flex-direction: row-reverse;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.img-lg {
+  margin-left: 60px;
+  margin-top: -140px;
+}
+
+@media (max-width: 768px) {
+  .img-lg {
+    margin-left: 20px;
+  }
 }
 
 .menuHero {
@@ -1235,7 +1280,7 @@ body, html {
   padding: 40px 0;
 }
 
-.group a {
+.group .group-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1251,8 +1296,14 @@ body, html {
   margin-bottom: 16px;
 }
 
+@media (max-width: 768px) {
+  .group .group-btn {
+    max-width: 280px;
+  }
+}
+
 @media (max-width: 568px) {
-  .group a {
+  .group .group-btn {
     border-left: solid 1px #f5efe3;
   }
 }
@@ -1860,5 +1911,6 @@ body, html {
   height: 16px;
   border: 0;
   cursor: pointer;
+  background-color: #f5efe3;
 }
 /*# sourceMappingURL=all.css.map */

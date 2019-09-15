@@ -72,7 +72,7 @@
     font-size: $font-l;
     padding: 40px 0;
   }
-  a{
+  .group-btn{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,6 +80,9 @@
     height: 56px;
     background-color: #fff;
     margin-bottom: 16px;
+    @include pad{
+      max-width: 280px;
+    }
     @include mobile{
       border-left: solid 1px $second;
     }

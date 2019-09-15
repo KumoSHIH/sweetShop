@@ -45,6 +45,9 @@
     color: #fff;
     position: absolute;
     z-index: 2;
+    @include pad{
+      margin-left: 42%;
+    }
     @include mobile{
       font-size: $font-m;
       margin-top: 25%;
@@ -130,5 +133,12 @@
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
+  }
+  .img-lg{
+    margin-left: 60px;
+    margin-top: -140px;
+    @include pad{
+      margin-left: 20px;
+    }
   }
   
