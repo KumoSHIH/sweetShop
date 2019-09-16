@@ -41,11 +41,11 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-// input{
-// 	-webkit-appearance: none;
-// 	-moz-appearance: none;
-// 	appearance: none;
-// }
+input{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
 // [type=checkbox]{
 //     -webkit-appearance: none;
 //     width: 20px;
@@ -55,18 +55,18 @@ table {
 //     position: relative;
 //     overflow: hidden;
 // }
-[type=checkbox]{
+// [type=checkbox]{
     
-    position: relative;
-    overflow: hidden;
-}
-[type=checkbox]:checked:after{
-    position: absolute;
-    content: '';
-	left: -35%;
-    top: -85%;
-    width: 20px;
-    height: 20px;
-    border: 2px solid $text;
-    transform:rotate(45deg);
-}
+//     position: relative;
+//     overflow: hidden;
+// }
+// [type=checkbox]:checked:after{
+//     position: absolute;
+//     content: '';
+// 	left: -35%;
+//     top: -85%;
+//     width: 20px;
+//     height: 20px;
+//     border: 2px solid $text;
+//     transform:rotate(45deg);
+// }
