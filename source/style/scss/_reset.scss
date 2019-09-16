@@ -46,12 +46,17 @@ input{
 	-moz-appearance: none;
 	appearance: none;
 }
+// [type=checkbox]{
+//     -webkit-appearance: none;
+//     width: 20px;
+//     height: 20px;
+//     border: 1px solid red;
+//     outline: none;
+//     position: relative;
+//     overflow: hidden;
+// }
 [type=checkbox]{
-    -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
-    border: 1px solid red;
-    outline: none;
+    
     position: relative;
     overflow: hidden;
 }
