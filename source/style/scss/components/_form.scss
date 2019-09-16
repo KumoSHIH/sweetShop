@@ -1,4 +1,5 @@
 .sweet-input{
+  -webkit-appearance: none;
   @include input-base;
   font-size: $font-s;
   padding-left: 50px;

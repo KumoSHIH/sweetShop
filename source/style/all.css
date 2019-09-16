@@ -54,6 +54,23 @@ input {
   appearance: none;
 }
 
+[type=checkbox] {
+  position: relative;
+  overflow: hidden;
+}
+
+[type=checkbox]:checked:after {
+  position: absolute;
+  content: '';
+  left: -35%;
+  top: -85%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #c19191;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -766,6 +783,7 @@ body, html {
 }
 
 .mail-input {
+  -webkit-appearance: none;
   position: relative;
   padding-left: 45px;
   -webkit-appearance: none;
@@ -1278,6 +1296,7 @@ body, html {
 }
 
 .login-input {
+  -webkit-appearance: none;
   width: 88%;
   margin-left: 50%;
   -webkit-transform: translateX(-50%);
@@ -1656,6 +1675,7 @@ body, html {
 
 .check-input {
   -webkit-appearance: none;
+  -webkit-appearance: none;
   height: 56px;
   border: 0;
   font-size: 24px;
@@ -1940,6 +1960,7 @@ body, html {
 }
 
 .sweet-input {
+  -webkit-appearance: none;
   -webkit-appearance: none;
   height: 56px;
   border: 0;
