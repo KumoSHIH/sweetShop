@@ -1,0 +1,148 @@
+//grid
+$gutter-width: 30px;
+$grid-num: 12;
+
+* {
+  box-sizing: border-box;
+}
+.container{
+  margin: 0 auto;
+  max-width: 1024px;
+  padding-left: $gutter-width / 2;
+  padding-right: $gutter-width / 2;
+}
+.row{
+  display: flex;
+  margin-left: -($gutter-width / 2);
+  margin-right: -($gutter-width / 2);
+  flex-wrap: wrap;
+}
+%col{
+  position: relative;
+  min-height: 1px;
+  max-width: 100%;
+  flex: 0 0 100%;
+  padding-left: $gutter-width / 2;
+  padding-right: $gutter-width / 2;
+}
+
+@for $i from 1 to $grid-num + 1 {
+  .col-#{$i} {
+    @extend %col
+  }
+}
+@media (min-width: 767px){
+  @for $i from 1 to $grid-num + 1 {
+    .col-#{$i} {
+      max-width: 100% * ( $i / $grid-num );
+      flex: 0 0 (100% * ( $i / $grid-num ));
+    }
+  }
+};
+
+@for $i from 1 to $grid-num + 1 {
+  .col-md-#{$i} {
+    @extend %col
+  }
+}
+@media (min-width: 767px){
+  @for $i from 1 to $grid-num + 1 {
+    .col-md-#{$i} {
+      max-width: 100% * ( $i / $grid-num );
+      flex: 0 0 (100% * ( $i / $grid-num ));
+    }
+  }
+};
+@for $i from 1 to $grid-num + 1 {
+  .col-lg-#{$i} {
+    @extend %col
+  }
+}
+@media (min-width: 991px){
+  @for $i from 1 to $grid-num + 1 {
+    .col-lg-#{$i} {
+      max-width: 100% * ( $i / $grid-num );
+      flex: 0 0 (100% * ( $i / $grid-num ));
+    }
+  }
+};
+.no-gutters{
+  margin-left: 0;
+  margin-right: 0;
+}
+.no-gutter{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+//flex
+.flex-sb{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-c{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.flex-md-c{
+  @include pad{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.flex-spc{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.flex-end{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.flex-md-end{
+  @media (min-width: 768px){
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+.flex-start{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+.flex-cc{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flex-md-cc{
+  @media (min-width: 768px){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+.justify-content-between{
+  justify-content: space-between;
+}
+.justify-content-center{
+  display: flex;
+  justify-content: center;
+}

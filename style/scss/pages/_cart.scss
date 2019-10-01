@@ -1,0 +1,123 @@
+//cart
+.content{
+  margin-bottom: 40px;
+  @include mobile{
+    margin-bottom: 0; 
+  }
+}
+.cart-title{
+  @include title;
+  color: $main;
+  background-color: $second;
+  padding: 16px 0;
+  margin-bottom: 13px;
+}
+.cart-wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: solid 1px $second; 
+  @include mobile{
+    border-bottom: 0; 
+  }
+}
+.cart-img{
+  width: 110px;
+  height: 110px;
+  @include mobile{
+    max-width: 157px;
+    max-height: 106px;
+  }
+}
+.cart-content{
+  display: flex;
+  justify-content: space-around;
+  @include mobile{
+    flex-direction: column;
+  }
+}
+.cart-name{
+  font-size: $font-m;
+  color: $main;
+  margin-right: 30px;
+  @include pad{
+    margin-right: 10px;
+  }
+  @include mobile{
+    margin-right: 0px;
+  }
+}
+.cart-num{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include mobile{
+    margin-top: 10px;
+  }
+}
+.item-price{
+  font-size: $font-s;
+  margin-top: 10px;
+}
+.cart-input{
+  display: block;
+  text-align: center;
+  width: 48px;
+  height: 48px;
+  border: solid 0.5px $second;
+  background-color: #fff;
+}
+.cart-price{
+  font-weight: bold;
+  font-size: $font-m;
+  color: $main;
+  @include mobile{
+    text-align: right;
+    border-top: solid 1px $second;
+    border-bottom: solid 1px $second;
+    padding: 10px 0;
+    margin-bottom: 30px;
+  }
+}
+.cart-del{
+  color: $main;
+  text-align: right;
+  @include mobile{
+    display: none;
+  }
+}
+
+//total
+.total-wrap{
+  background-color: $main;
+  color: $second;
+  padding: 0 20px;
+  @include mobile{
+    color: $main;
+    background-color: #fff;
+  }
+}
+.total-title{
+  @include title;
+  background-color: $main;
+  padding: 16px 0px;
+  border-bottom: solid 1px $second;
+  @include mobile{
+    background-color: $second;
+    color: $main;
+    border-bottom: 0;
+  }
+}
+.cart-btn{
+  @include btn;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 65px;
+  text-decoration: none;
+  font-size: $font-l;
+  font-weight: bold;
+  color: $main;
+}

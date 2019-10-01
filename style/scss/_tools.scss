@@ -1,0 +1,122 @@
+// text
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+.text-center{
+  text-align: center;
+}
+
+// margin & padding
+.mr-1{
+  margin-right: 10px;
+}
+.mr-auto{
+  margin-right: auto;
+}
+.ml-auto{
+  margin-left: auto;
+}
+.mt-auto{
+  margin-top: auto;
+}
+.mt-1{
+  margin-top: 10px;
+}
+.mt-2{
+  margin-top: 1em;
+}
+.mt-3{
+  margin-top: 30px;
+}
+.mb-2{
+  margin-bottom: 1em;
+}
+.pb-2{
+  padding-bottom: 1em;
+}
+.pt-3{
+  padding-top: 30px;
+}
+.pb-3{
+  padding-bottom: 30px;
+}
+.py-2{
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.py-3{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.px-20{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+// breakPoint: display
+.d-block{
+  display: block;
+}
+.d-none{
+  display: none;
+}
+.d-inline-block{
+  display: inline-block;
+}
+.d-md-block{
+  @media (min-width: 768px){
+    display: block;
+  }
+}
+.d-md-none{
+  @media (min-width: 768px){
+    display: none;
+  }
+}
+
+//picture
+.bg-cover{
+  background-position: center center;
+  background-size: cover;
+}
+
+.four-side {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+//text
+.vertical{
+  writing-mode: vertical-rl;
+}
+.title{
+  font-size: $font-title;
+  font-weight: bold;
+  color: $second;
+}
+//position
+.por{
+  position: relative;
+}
+
+.w-100{
+  width: 100%;
+}
+.rwd-gutter{
+  @include mobile{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.fix-padding{
+  padding-right: 5px;
+  @include mobile{
+    padding-right: 15px;
+  }
+}
+
